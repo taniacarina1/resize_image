@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Size Calculator</title>
+    <script src="calculateSize.js" defer></script>
+</head>
+<body style="align-items: center; ;text-align: center;">
+    <h1> Calculator pentru rezolutie acceptata de shopify</h1>
+    <div style="align-items: center; background-color: rgb(236, 176, 154);border: 1px; border: solid; text-align: center;" >
+        <h1>Folosind dimensiunile imaginii</h1>
+        
+        <form id="sizeForm">
+            <label for="width">Original Width (px):</label>
+            <input type="number" id="width" required>
+            <br>
+            <br>
+            <label for="height">Original Height (px):</label>
+            <input type="number" id="height" required>
+            <br>
+            <br>
+            <button type="button" onclick="calculateAndDisplaySize()">Calculeaza dimensiunea</button>
+            <br>
+        </form>
+        
+        <h2>Result:</h2>
+        <p id="result" style="font-weight: bold;"></p>
+    </div>
+<br>
+<br>
+<br>
+    <div style="align-items: center; background-color: rgb(160, 242, 248); border: 1px; border: solid;" >
+        <h1>Folosind imaginea</h1>
+        
+        <label for="imageUpload">Upload an image:</label>
+        <input type="file" id="imageUpload" accept="image/*">
+        
+        <h2>Dimensiuni originale:</h2>
+        <p id="originalDimensions">Width: - Height: -</p>
+        
+        <h2>Dimensiune acceptata:</h2>
+        <p id="recommendedDimensions" style="font-weight: bold;">Width: - Height: -</p>
+    </div>
+<br>
+<br>
+<br>
+    <div style="align-items: center; background-color: rgb(204, 236, 130);border: 1px; border: solid;" >
+        <h1> Redimensioneaza imaginea</h1>
+        
+        <label for="imageUploadAndResize">Incarca imaginea:</label>
+        <input type="file" id="imageUploadAndResize" accept="image/*">
+        
+        <h2>Dimensiuni originale:</h2>
+        <p id="originalDimensions3">Width: - Height: -</p>
+        
+        <h2>Dimensiune acceptata:</h2>
+        <p id="recommendedDimensions3"  style="font-weight: bold;">Width: - Height: -</p>
+
+        <button id="downloadButton" style="display: none;">Download Resized Image</button>
+        
+        <canvas id="canvas" style="display: none;"></canvas>
+    </div>
+</body>
+</html>
